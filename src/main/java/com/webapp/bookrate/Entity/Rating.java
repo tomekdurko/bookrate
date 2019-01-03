@@ -63,11 +63,6 @@ public class Rating {
         this.user = user;
     }
 
-    public Rating(byte rate, String review, User user, Book book)
-    {
-        this.rate = rate;
-        this.review =review;
-        this.book=book;
-        this.user=user;
-    }
+    public Rating()
+    { }
 }

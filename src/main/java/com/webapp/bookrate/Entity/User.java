@@ -63,10 +63,7 @@ public class User {
         return name;
     }
 
-    public User(String name, String password, String email)
+    public User()
     {
-        this.name = name;
-        this.email = email;
-        this.password= password;
     }
 }

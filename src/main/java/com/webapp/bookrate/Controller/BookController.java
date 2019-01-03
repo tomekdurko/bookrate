@@ -3,7 +3,6 @@ package com.webapp.bookrate.Controller;
 
 import com.webapp.bookrate.Entity.Book;
 import com.webapp.bookrate.Services.BookServices;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,6 +41,12 @@ public class BookController {
     public Optional<Book> getBookByName(@PathVariable String name)
     {
         return bookServices.getBookByName(name);
+    }
+
+    @GetMapping("/{bookId}")
+    public Optional<Book> getBookById(@PathVariable long bookId)
+    {
+        return bookServices.getBook(bookId);
     }
 
 }
