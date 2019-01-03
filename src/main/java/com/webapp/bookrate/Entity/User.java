@@ -19,17 +19,17 @@ public class User {
     private String password;
 
 
-    @OneToMany
-    @JoinColumn( name = "user_id")
-    private Set<Rating> ratings;
+//    @OneToMany
+//    @JoinColumn( name = "user_id")
+//    private Set<Rating> ratings;
 
     public void setId(long id) {
         this.id = id;
     }
 
-    public void setRatings(Set<Rating> ratings) {
-        this.ratings = ratings;
-    }
+//    public void setRatings(Set<Rating> ratings) {
+//        this.ratings = ratings;
+//    }
 
     public void setEmail(String email) {
         this.email = email;
@@ -43,9 +43,9 @@ public class User {
         this.name = name;
     }
 
-    public Set<Rating> getRatings() {
-        return ratings;
-    }
+//    public Set<Rating> getRatings() {
+//        return ratings;
+//    }
 
     public long getId() {
         return id;

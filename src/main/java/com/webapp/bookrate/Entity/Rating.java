@@ -14,6 +14,14 @@ public class Rating {
 
     private String review;
 
+    @ManyToOne
+    @JoinColumn( name = "user_id")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn( name = "book_id")
+    private Book book;
+
 
     public void setRate(byte rate) {
         this.rate = rate;
@@ -39,9 +47,27 @@ public class Rating {
         return review;
     }
 
-    public Rating(byte rate, String review)
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Rating(byte rate, String review, User user, Book book)
     {
         this.rate = rate;
         this.review =review;
+        this.book=book;
+        this.user=user;
     }
 }

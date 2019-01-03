@@ -10,6 +10,8 @@ public class Book {
     @GeneratedValue
     private long id;
 
+    private String name;
+
     private String author;
 
     private short year;
@@ -18,10 +20,14 @@ public class Book {
 
     private String genre;
 
-    @OneToMany
-    @JoinColumn( name = "book_id")
-    private Set<Rating> ratings;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public void setAuthor(String author) {
         this.author = author;
@@ -31,20 +37,12 @@ public class Book {
         this.genre = genre;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
 
     public void setYear(short year) {
         this.year = year;
-    }
-
-    public void setRatings(Set<Rating> ratings) {
-        this.ratings = ratings;
     }
 
     public long getId() {
@@ -67,7 +65,6 @@ public class Book {
         return publisher;
     }
 
-    public Set<Rating> getRatings() {
-        return ratings;
-    }
+    public Book()
+    {}
 }
